@@ -66,10 +66,12 @@ section {
   transform: translateX(-100%);
   transition: 0.6s;
   position: absolute;
+  filter: drop-shadow(2px 2px 3px var(--bg));
 }
 .navbar .navbar-logo:hover {
   background: transparent;
-  filter: drop-shadow(2px 2px 3px var(--bg));
+  filter: drop-shadow(1px 1px 2px #fff);
+ 
 }
 
 .navbar .navbar-logo span {
@@ -123,7 +125,7 @@ section {
 /* hero section */
 
 .hero {
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   background-image: url("../img/koppi.bg.jpg");
@@ -147,7 +149,10 @@ section {
 }
 
 .hero .content {
-  max-width: 60rem;
+  width: 80%;
+  height: 50%;
+  padding-top: 3%;
+  padding-inline: 2%;
 }
 
 .hero .content h1 {
@@ -397,7 +402,7 @@ section {
 
 .menu {
   height: 140vh;
-  width: 100vw;
+
 }
 
 .menu h2 {
@@ -567,7 +572,6 @@ footer .credit a {
   font-weight: 700;
 }
 
-/* percobaan */
 
 /* nedia queries */
 
@@ -687,7 +691,7 @@ footer {
 
   .navbar .navbar-nav a:hover {
     font-weight: 900;
-    transform: scalez(1 2);
+    transform: scalez(1.2);
     color: #000;
     filter: drop-shadow(1px 1px 2px #000);
     transition: all 0.5s linear;
@@ -785,9 +789,10 @@ footer {
   }
 
   .hero .cta {
-    width: 40%;
+    width: 45%;
     height: 11%;
   }
+
 
   .about {
     position: relative;
@@ -822,11 +827,22 @@ margin-bottom: 10%;
   border-radius: 30px;
 }
 
+.contact .row  {
+  position: relative;
+  background-color: khaki;
+}
 .contact .row form {
   position: relative;
-  top: -60px;
-
+  top: -40px;
+  min-width: 100%;
 }
+.contact .row .input-grup {
+width: 90%;
+
+margin-left: 5%;
+}
+
+
 
 }
 

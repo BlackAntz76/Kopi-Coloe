@@ -488,7 +488,7 @@ body {
 /*  ---------   Menu Section    ----------    */
 
 .menu {
-  height: 140vh;
+  height: 100vh;
 }
 
 .menu h2 {
@@ -547,7 +547,7 @@ body {
 
 .contact {
   /* background-image: url(../img/meja.jpg); */
-  padding-top: 4rem;
+  padding-top: 25%;
   height: 100vh;
 }
 
@@ -675,7 +675,7 @@ footer .credit a {
     height: 8%;
   }
   .hero {
-    height: 100vh;
+    /* height: 100vh; */
   }
 
   .social {
@@ -776,13 +776,13 @@ footer .credit a {
   }
 
   .hero {
-    height: 110vh;
+    /* height: 100vh; */
   }
 
-  .hero .content {
+  /* .hero .content {
     height: 50vh;
     padding: 2%;
-  }
+  } */
 
   .hero .content h1 {
     line-height: 0.4;
@@ -802,12 +802,14 @@ footer .credit a {
   }
 
   .about {
-    height: 100vh;
-    padding-top: 10%;
+    height: 100%;
+
+
   }
 
   .about .row {
     flex-wrap: wrap;
+  
   }
 
   .about .row .about-img img {
@@ -854,8 +856,9 @@ footer .credit a {
     font-size: 55%;
   }
 
-  .hero {
-    background-position: 60%;
+  .hero .content {
+    padding-top: 10%;
+  
   }
 
   .hero .content .cta {
@@ -876,19 +879,24 @@ footer .credit a {
   }
 
   .about {
-    margin-top: 1ch;
-    height: 70vh;
+    /* margin-top: 20%; */
+    height: 100%;
   }
+  /* .about H2 {
+    padding-top: 10%;
+  } */
 
   .menu {
-    /* padding: 10%; */
-    height: 100vh;
-    padding-top: 10%;
-    margin-bottom: 10%;
+   
+    margin-top: 10%;
   }
   .menu .row {
-    width: 100vw;
-    height: 80vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    /* width: 100vw;
+    height: 80vh; */
   }
 
   .menu .row .menu-card img {
@@ -900,13 +908,16 @@ footer .credit a {
     height: 97.5vh;
   }
 
+  .contact H2 {
+    margin-top: 10%;
+  }
   .contact .maps {
     border-radius: 30px;
   }
 
   .contact .row {
     position: relative;
-    background-color: khaki;
+  
   }
   .contact .row form {
     position: relative;

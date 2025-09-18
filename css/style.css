@@ -62,68 +62,61 @@ body {
   opacity: 0;
 }
 
-
-.navbar .navbar-logo  span {
-
+.navbar .navbar-logo span {
   font-size: 2.3rem;
   color: #000;
   filter: drop-shadow(0 0 1px silver);
-  animation-name: animasiku-span ;
+  animation-name: animasiku-span;
   animation-duration: 10s;
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-  
-
 }
 
- @keyframes animasiku {
+@keyframes animasiku {
   0% {
-   color: #000;
-   filter: drop-shadow(0 0 2px  #fff);
+    color: #000;
+    filter: drop-shadow(0 0 2px #fff);
     opacity: 0.4;
   }
 
   25% {
-   color: #fff;
-    opacity: 0.5; 
+    color: #fff;
+    opacity: 0.5;
   }
 
   50% {
-    filter: drop-shadow(0 0 1px  #fff);
+    filter: drop-shadow(0 0 1px #fff);
     opacity: 0.1;
-   
   }
   60% {
-    filter: drop-shadow(0 0 1px  #fff);
+    filter: drop-shadow(0 0 1px #fff);
     opacity: 0.5;
-    
   }
 
   80% {
     color: #fff;
     filter: drop-shadow(0 0 1px #fff);
     opacity: 0.8;
-  } 
+  }
   100% {
     color: #fff;
     filter: drop-shadow(0 0 1px #fff);
     opacity: 1;
-  } 
-} 
-
+  }
+}
 
 @keyframes animasiku-span {
   0% {
     color: #000;
     opacity: 0.7;
-      
+
     filter: drop-shadow(0 0 1px #000);
   }
 
   25% {
     color: #000;
-      
+
     filter: drop-shadow(0 0 1px #000);
     opacity: 0.5;
   }
@@ -134,24 +127,20 @@ body {
     opacity: 0.7;
   }
 
-
   100% {
     color: #ffcc00;
-  
+
     filter: drop-shadow(0 0 1px #fff);
     opacity: 1;
-   
   }
 
   150% {
     color: #ffcc00;
-  
+
     filter: drop-shadow(0 0 1px #fff);
     opacity: 1;
-   
   }
-} 
-
+}
 
 .navbar-nav .navbar-logo::before {
   content: "";
@@ -169,7 +158,6 @@ body {
 .navbar .navbar-logo:hover {
   background: transparent;
   filter: drop-shadow(1px 1px 2px #fff);
- 
 }
 
 .navbar .navbar-logo span {
@@ -279,7 +267,6 @@ body {
       display: block;
       /* padding: 0.2rem 0; */
       animation: animateWords 7s infinite ease;
-    
     }
   }
 }
@@ -295,6 +282,7 @@ body {
 }
 
 .hero .content .cta {
+  display: flex;
   margin-top: 1rem;
   display: inline-block;
   padding: 1rem 3rem;
@@ -330,7 +318,6 @@ body {
   position: fixed;
   top: 50px;
   left: -150px;
-
 }
 
 .social ul {
@@ -384,7 +371,6 @@ body {
 
 .social ul li:hover svg {
   animation: spinRight 1s linear forwards;
-  
 }
 
 .social ul li svg:not(:hover) {
@@ -399,14 +385,12 @@ body {
   to {
     transform: rotate(360deg);
     padding: 2px;
- 
   }
 }
 @keyframes spinLeft {
   from {
-    transform: rotate(360deg) ;
+    transform: rotate(360deg);
     padding: 2px;
-
   }
   to {
     transform: rotate(0deg);
@@ -455,7 +439,6 @@ body {
   padding-top: 5%;
   margin-top: 4%;
   height: 100vh;
-
 }
 
 .about h2 {
@@ -478,7 +461,6 @@ body {
 .about .row .about-img {
   flex: 1 1 40rem;
   /* margin-right: 2rem; */
-
 }
 
 .about .row .about-img img {
@@ -507,7 +489,6 @@ body {
 
 .menu {
   height: 140vh;
-
 }
 
 .menu h2 {
@@ -541,7 +522,6 @@ body {
   padding-bottom: 1rem;
   margin-inline: 3%;
   line-height: 0.9rem;
-
 }
 
 .menu-card .menu-img {
@@ -549,7 +529,6 @@ body {
   object-fit: cover;
   border-radius: 50%;
   width: 250px;
-
 }
 
 .menu .row h3 {
@@ -678,7 +657,6 @@ footer .credit a {
   font-weight: 700;
 }
 
-
 /* nedia queries */
 
 /* leptop */
@@ -688,12 +666,10 @@ footer .credit a {
   }
 }
 
-
 @media (max-width: 884px) {
   html {
     font-size: 80%;
   }
-
 
   .navbar {
     height: 8%;
@@ -703,59 +679,49 @@ footer .credit a {
   }
 
   .social {
-   top: 100px;
-   height: 50px;
-   width: 50px;
+    top: 100px;
+    height: 50px;
+    width: 50px;
   }
 
-  .social svg{
-   height: 50px;
-   width: 50px;
+  .social svg {
+    height: 50px;
+    width: 50px;
   }
 
+  .about {
+    height: 45vh;
+    margin-top: 10%;
+    padding-top: 10%;
+  }
 
-.about {
-  height: 45vh;
-  margin-top: 10%;
-  padding-top: 10%;
+  .about .row {
+    margin-top: 5%;
+  }
+
+  .menu {
+    padding-top: 10%;
+  }
+
+  .contact {
+    position: relative;
+    top: -240px;
+    height: 70vh;
+    margin-top: 20%;
+  }
+
+  .contact p {
+    padding-top: 3%;
+  }
+  .contact .row {
+    padding-top: 7%;
+  }
+
+  footer {
+    position: relative;
+    top: -50px;
+  }
 }
-
-.about .row {
-  margin-top: 5%;
-}
-
-
-
-.menu {
-  padding-top: 10%;
-}
-
-.contact {
-  position: relative;
-  top: -240px;
-  height: 70vh;
-  margin-top: 20%;
-}
-
-.contact p {
-  padding-top: 3%;
-}
-.contact .row {
-  padding-top: 7%;
-
-}
-
-
-footer {
-  position: relative;
-  top: -50px;
-}
-
-
-}
-
-
-
 
 /* tablet */
 
@@ -892,68 +858,66 @@ footer {
     background-position: 60%;
   }
 
-  .hero .cta {
+  .hero .content .cta {
     width: 45%;
-    height: 11%;
+    height: 13%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(1.5rem, 2.5vw, 1.4rem);
+    padding: 0.75rem 1rem;
+    font-weight: bold;
   }
 
-
   .social {
-   top: 8%;
-   height: 50px;
-   width: 50px;
+    top: 8%;
+    height: 50px;
+    width: 50px;
   }
 
   .about {
-    /* position: relative; */
- 
     margin-top: 1ch;
-  height: 70vh;
+    height: 70vh;
   }
 
-.menu {
-  /* padding: 10%; */
-  height: 100vh;
-  padding-top: 10%;
-margin-bottom: 10%;
-}
-.menu .row {
-  width: 100vw;
-  height: 80vh;
+  .menu {
+    /* padding: 10%; */
+    height: 100vh;
+    padding-top: 10%;
+    margin-bottom: 10%;
+  }
+  .menu .row {
+    width: 100vw;
+    height: 80vh;
+  }
 
- 
-}
+  .menu .row .menu-card img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+  }
+  .contact {
+    height: 97.5vh;
+  }
 
-.menu .row .menu-card img {
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
-}
-.contact {
-  height: 97.5vh;
-}
+  .contact .maps {
+    border-radius: 30px;
+  }
 
-.contact .maps {
-  border-radius: 30px;
-}
+  .contact .row {
+    position: relative;
+    background-color: khaki;
+  }
+  .contact .row form {
+    position: relative;
+    top: -40px;
+    min-width: 100%;
+  }
+  .contact .row .input-grup {
+    width: 90%;
 
-.contact .row  {
-  position: relative;
-  background-color: khaki;
-}
-.contact .row form {
-  position: relative;
-  top: -40px;
-  min-width: 100%;
-}
-.contact .row .input-grup {
-width: 90%;
-
-margin-left: 5%;
-}
-
-
-
+    margin-left: 5%;
+  }
 }
 
 @keyframes animateWords {

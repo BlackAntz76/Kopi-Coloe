@@ -898,6 +898,12 @@ footer {
   }
 
 
+  .social {
+   top: 8%;
+   height: 50px;
+   width: 50px;
+  }
+
   .about {
     /* position: relative; */
  

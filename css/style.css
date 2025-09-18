@@ -26,9 +26,9 @@ body {
   background-position: center;
 }
 
-section {
+/* section {
   padding: 3% 6%;
-}
+} */
 
 /* navbar */
 
@@ -49,12 +49,109 @@ section {
 .navbar .navbar-logo {
   font-size: 2.2rem;
   font-weight: 700;
-  color: #fff;
+  color: #000;
   font-style: bold;
   filter: drop-shadow(0 0 1px silver);
   text-transform: uppercase;
   overflow: hidden;
+  animation-name: animasiku;
+  animation-duration: 10s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  opacity: 0;
 }
+
+
+.navbar .navbar-logo  span {
+
+  font-size: 2.3rem;
+  color: #000;
+  filter: drop-shadow(0 0 1px silver);
+  animation-name: animasiku-span ;
+  animation-duration: 10s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  
+
+}
+
+ @keyframes animasiku {
+  0% {
+   color: #000;
+   filter: drop-shadow(0 0 2px  #fff);
+    opacity: 0.4;
+  }
+
+  25% {
+   color: #fff;
+    opacity: 0.5; 
+  }
+
+  50% {
+    filter: drop-shadow(0 0 1px  #fff);
+    opacity: 0.1;
+   
+  }
+  60% {
+    filter: drop-shadow(0 0 1px  #fff);
+    opacity: 0.5;
+    
+  }
+
+  80% {
+    color: #fff;
+    filter: drop-shadow(0 0 1px #fff);
+    opacity: 0.8;
+  } 
+  100% {
+    color: #fff;
+    filter: drop-shadow(0 0 1px #fff);
+    opacity: 1;
+  } 
+} 
+
+
+@keyframes animasiku-span {
+  0% {
+    color: #000;
+    opacity: 0.7;
+      
+    filter: drop-shadow(0 0 1px #000);
+  }
+
+  25% {
+    color: #000;
+      
+    filter: drop-shadow(0 0 1px #000);
+    opacity: 0.5;
+  }
+
+  75% {
+    color: #ffcc00;
+    filter: drop-shadow(0 0 1px #fff);
+    opacity: 0.7;
+  }
+
+
+  100% {
+    color: #ffcc00;
+  
+    filter: drop-shadow(0 0 1px #fff);
+    opacity: 1;
+   
+  }
+
+  150% {
+    color: #ffcc00;
+  
+    filter: drop-shadow(0 0 1px #fff);
+    opacity: 1;
+   
+  }
+} 
+
 
 .navbar-nav .navbar-logo::before {
   content: "";
@@ -68,6 +165,7 @@ section {
   position: absolute;
   filter: drop-shadow(2px 2px 3px var(--bg));
 }
+
 .navbar .navbar-logo:hover {
   background: transparent;
   filter: drop-shadow(1px 1px 2px #fff);
@@ -181,6 +279,7 @@ section {
       display: block;
       /* padding: 0.2rem 0; */
       animation: animateWords 7s infinite ease;
+    
     }
   }
 }
@@ -285,6 +384,7 @@ section {
 
 .social ul li:hover svg {
   animation: spinRight 1s linear forwards;
+  
 }
 
 .social ul li svg:not(:hover) {
@@ -294,16 +394,19 @@ section {
 @keyframes spinRight {
   from {
     transform: rotate(0deg);
+    opacity: 0.5;
   }
   to {
     transform: rotate(360deg);
     padding: 2px;
+ 
   }
 }
 @keyframes spinLeft {
   from {
-    transform: rotate(360deg);
+    transform: rotate(360deg) ;
     padding: 2px;
+
   }
   to {
     transform: rotate(0deg);
@@ -352,6 +455,7 @@ section {
   padding-top: 5%;
   margin-top: 4%;
   height: 100vh;
+
 }
 
 .about h2 {
@@ -373,7 +477,8 @@ section {
 
 .about .row .about-img {
   flex: 1 1 40rem;
-  margin-right: 2rem;
+  /* margin-right: 2rem; */
+
 }
 
 .about .row .about-img img {
@@ -408,11 +513,11 @@ section {
 .menu h2 {
   text-align: center;
   font-size: 3rem;
-  padding-top: 3%;
+  padding-top: 5%;
 }
 
 .menu p {
-  padding: 1rem 1rem;
+  padding: 0.3rem 1rem;
   font-size: 1rem;
   text-align: center;
 }
@@ -444,25 +549,26 @@ section {
   object-fit: cover;
   border-radius: 50%;
   width: 250px;
-  /* padding: 0 5%; */
 
 }
 
 .menu .row h3 {
-  font-size: 2rem;
-  margin: 1.5rem auto 0;
+  font-size: 1.7rem;
+  margin: 1.2rem auto 0;
   font-weight: 900;
 }
 
 .menu .row p {
-  font-size: 1.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  padding-top: 5px;
 }
 
 /*   -------   contact section   --------    */
 
 .contact {
   /* background-image: url(../img/meja.jpg); */
-  /* padding: 3.2rem 5% 1rem; */
+  padding-top: 4rem;
   height: 100vh;
 }
 
@@ -583,7 +689,7 @@ footer .credit a {
 }
 
 
-@media (min-width: 769px) and (max-width: 884px) {
+@media (max-width: 884px) {
   html {
     font-size: 80%;
   }
@@ -593,7 +699,7 @@ footer .credit a {
     height: 8%;
   }
   .hero {
-    height: 110vh;
+    height: 100vh;
   }
 
   .social {
@@ -609,8 +715,8 @@ footer .credit a {
 
 
 .about {
-  height: 50vh;
-  margin-top: 6%;
+  height: 45vh;
+  margin-top: 10%;
   padding-top: 10%;
 }
 
@@ -618,9 +724,7 @@ footer .credit a {
   margin-top: 5%;
 }
 
-.about .row .about-img {
-  width: 100vw;
-}
+
 
 .menu {
   padding-top: 10%;
@@ -628,7 +732,7 @@ footer .credit a {
 
 .contact {
   position: relative;
-  top: -260px;
+  top: -240px;
   height: 70vh;
   margin-top: 20%;
 }
@@ -795,7 +899,7 @@ footer {
 
 
   .about {
-    position: relative;
+    /* position: relative; */
  
     margin-top: 1ch;
   height: 70vh;

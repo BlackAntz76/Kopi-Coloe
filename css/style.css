@@ -265,8 +265,8 @@ body {
 
     span {
       display: block;
-      /* padding: 0.2rem 0; */
       animation: animateWords 7s infinite ease;
+      
     }
   }
 }
@@ -738,11 +738,10 @@ footer .credit a {
     position: absolute;
     top: 100%;
     right: -100%;
-    background-color: khaki;
     width: 40%;
     height: 50vh;
     transition: 0.3s;
-    opacity: 0.5;
+    opacity: 0.7;
   }
 
   .navbar .navbar-nav.active {
@@ -760,11 +759,14 @@ footer .credit a {
   }
 
   .navbar .navbar-nav a:hover {
-    font-weight: 900;
+    font-weight: bold;
     transform: scalez(1.2);
-    color: #000;
-    filter: drop-shadow(1px 1px 2px #000);
     transition: all 0.5s linear;
+    animation-name: animasiku-span;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
   }
 
   .navbar .navbar-nav a::after {
@@ -772,7 +774,7 @@ footer .credit a {
   }
 
   .navbar .navbar-nav a:hover::after {
-    transform: scaleX(0.6);
+    transform: scaleX(0.3);
   }
 
   .hero {
@@ -803,13 +805,10 @@ footer .credit a {
 
   .about {
     height: 100%;
-
-
   }
 
   .about .row {
     flex-wrap: wrap;
-  
   }
 
   .about .row .about-img img {
@@ -858,7 +857,6 @@ footer .credit a {
 
   .hero .content {
     padding-top: 10%;
-  
   }
 
   .hero .content .cta {
@@ -887,7 +885,6 @@ footer .credit a {
   } */
 
   .menu {
-   
     margin-top: 10%;
   }
   .menu .row {
@@ -917,7 +914,6 @@ footer .credit a {
 
   .contact .row {
     position: relative;
-  
   }
   .contact .row form {
     position: relative;

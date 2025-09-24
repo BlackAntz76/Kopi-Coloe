@@ -46,14 +46,45 @@ document.addEventListener("click", function (e) {
   }
 });
 
+
 // modal box
 
 const itemDetailModal = document.querySelector('#item-detail-modal');
 
-const itemDetailButton = document.querySelector('.item-detail-button');
+const itemDetailButtons = document.querySelectorAll('.item-detail-button');
 
+itemDetailButtons.forEach((btn) => {
 
-itemDetailButton.onclick = (e) => {
+btn.onclick = (e) => {
   itemDetailModal.style.display = 'flex';
   e.preventDefault();
+};
+});
+
+
+
+// klik tombol close
+document.querySelector('.modal .close-icon').onclick = (e) => {
+  itemDetailModal.style.display = 'none';
+  e.preventDefault();
+};
+
+// klik di luar modal
+
+
+window.onclick = (e) => {
+  if (e.target === itemDetailModal) {
+    itemDetailModal.style.display = 'none';
+
+  };
+};
+
+// konversi rupiah
+
+const rupiah = (number) => {
+  return new Intl.NumberFormat('id-ID', {
+    style:'currency',
+currency: 'IDR',
+minimumFractionDigits: 0,
+  }).format(number);
 };

@@ -2,8 +2,7 @@
   --primary: #b6895b;
   --secondary: #21b604c4;
   --bg: #010101;
-  --tertier: #00fffc;
-  --quarter:#ffcc00;
+  --tertier: #ffcc00;
 }
 
 * {
@@ -56,7 +55,7 @@ body {
   text-transform: uppercase;
   overflow: hidden;
   animation-name: animasiku;
-  animation-duration: 10s;
+  animation-duration: 6s;
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
   animation-direction: alternate;
@@ -68,7 +67,7 @@ body {
   color: #000;
   filter: drop-shadow(0 0 1px silver);
   animation-name: animasiku-span;
-  animation-duration: 10s;
+  animation-duration: 6s;
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
   animation-direction: alternate;
@@ -77,28 +76,31 @@ body {
 @keyframes animasiku {
   0% {
     color: #000;
-    filter: drop-shadow(0 0 2px #fff);
-    opacity: 0.4;
+    filter: drop-shadow(0 1px 2px #fff);
+    opacity: 1;
   }
 
   25% {
     color: #fff;
-    opacity: 0.5;
+     filter: drop-shadow(0 1px 2px #000);
+    opacity: 1;
   }
 
   50% {
-    filter: drop-shadow(0 0 1px #fff);
-    opacity: 0.1;
+      color: #fff;
+    filter: drop-shadow(0 1px 2px #000);
+    opacity: 1;
   }
   60% {
-    filter: drop-shadow(0 0 1px #fff);
-    opacity: 0.5;
+    color: #000;
+    filter: drop-shadow(0 1px 2px #fff);
+    opacity: 1;
   }
 
-  80% {
+  75% {
     color: #fff;
-    filter: drop-shadow(0 0 1px #fff);
-    opacity: 0.8;
+    filter: drop-shadow(0 1px 2px #000);
+    opacity: 1;
   }
   100% {
     color: #fff;
@@ -109,33 +111,37 @@ body {
 
 @keyframes animasiku-span {
   0% {
-    color: #000;
-    opacity: 0.7;
-    filter: drop-shadow(0 0 1px #000);
+    color:  #ffcc00;
+    opacity: 1;
+    filter: drop-shadow(0 0 1px  #ffcc00);
   }
 
   25% {
-    color: #000;
+    color: #ffcc00;
+    filter: drop-shadow(0 0 1px #ffcc00);
+    opacity: 1;
+  }
 
-    filter: drop-shadow(0 0 1px #000);
+  50% {
+    color: #ffcc00;
+    filter: drop-shadow(0 0 1px #ffcc00);
+    opacity: 1;
+  }
+  60% {
+    color:  #000;
+    filter: drop-shadow(0 1 2px  #000);
     opacity: 0.5;
   }
 
   75% {
     color: #ffcc00;
-    filter: drop-shadow(0 0 1px #fff);
-    opacity: 0.7;
+    filter: drop-shadow(0 0 1px #ffcc00);
+    opacity: 1;
   }
 
   100% {
     color: #ffcc00;
-    filter: drop-shadow(0 0 1px #fff);
-    opacity: 1;
-  }
-
-  150% {
-    color: #ffcc00;
-    filter: drop-shadow(0 0 1px #fff);
+    filter: drop-shadow(0 1px 2px #ffcc00);
     opacity: 1;
   }
 }
@@ -170,7 +176,7 @@ body {
   font-size: 1.7rem;
   margin: 0 0.5rem;
   padding: 0 0.3rem;
-    transition: all 0.9s;
+  transition: 0.3s linear;
 }
 
 .navbar .navbar-nav a:hover {
@@ -178,21 +184,20 @@ body {
   transform: scale(1.2);
   transform: translatey(-5px);
   transition: all 0.5s;
-  filter: drop-shadow( 0 0 2px #fff);
+  filter: drop-shadow(0 0 0.5px silver);
 }
 
 .navbar .navbar-nav a::after {
   content: "";
   display: block;
   padding-bottom: 0.1rem;
-  border-bottom: 0.1rem solid var(--quarter);
+  border-bottom: 0.1rem solid var(--primary);
   transform: scaleX(0);
-  /* transition: 0.1s linear; */
+  transition: 0.3s linear;
 }
 
 .navbar .navbar-nav a:hover::after {
   transform: scaleX(0.6);
-  filter: drop-shadow(0 0 2px var(--quarter));
 }
 
 .navbar .navbar-extra a {
@@ -213,10 +218,10 @@ body {
 .navbar .search-form {
   position: absolute;
   top: 100%;
-  right: 7%;
+  right: 9%;
   background-color: white;
-  width: 50rem;
-  height: 5rem;
+  width: 57rem;
+  height: 3.5rem;
   display: flex;
   align-items: center;
   transform: scaleY(0);
@@ -266,7 +271,7 @@ body {
   align-items: center;
   gap: 1.5rem;
   padding-bottom: 1rem;
-  border-bottom: 1px dashed #333;
+  border-bottom: 1px dashed #ffcc00;
   position: relative;
 }
 
@@ -280,7 +285,7 @@ body {
 padding-bottom: 0.5rem;
 }
 
-.shopping-cart .item-pice {
+.shopping-cart .item-price {
   font-size: 1.2rem;
 }
 
@@ -291,7 +296,7 @@ padding-bottom: 0.5rem;
 }
 
 .shopping-cart .remove-item:hover {
-  color: var(--primary);
+  color: var(--tertier);
 }
 
 
@@ -369,7 +374,7 @@ padding-bottom: 0.5rem;
 
 .hero .content .cta {
   display: flex;
-  margin-top: 1rem;
+  margin-top: 1.7rem;
   display: inline-block;
   padding: 1rem 3rem;
   font-size: 1.4rem;
@@ -394,7 +399,7 @@ padding-bottom: 0.5rem;
 
 .cta:hover::before {
   left: calc(100% + 10px);
-  transition: left 500ms;
+  transition: left 600ms linear;
 }
 
 /*    -----    SOCIAL  ------   */
@@ -404,10 +409,14 @@ padding-bottom: 0.5rem;
   position: fixed;
   top: 50px;
   left: -150px;
+  transform: translateX(-10px);
 }
 
 .social ul {
-  transform: translateX(-10px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  direction: rtl;
 }
 
 .social ul li {
@@ -416,30 +425,73 @@ padding-bottom: 0.5rem;
   margin: 5px;
   width: 200px;
   border-radius: 0 30px 30px 0;
-  transition: all 1s;
-  direction: rtl;
+ color: white;
+ font-size: 1.7rem;
+ padding-right: 5%;
+ gap: 20px;
+ position: relative;
+ transition: all 2s ease;
 }
 
-.social ul li:hover {
+/* .social ul li {
+  display: block;
+  text-align: right;
+  margin: 5px;
+  width: 200px;
+  border-radius: 0 30px 30px 0;
+  direction: rtl;
+} */
+
+.social  li:hover {
+  transform: translateX(130px);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.social ul li svg {
+  position: relative;
+  top: 2px;
+  left: 10px;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  border-radius: 50%;
+  transform: rotate(0deg);
+  background-color: #000;
+  opacity: 0.7;
+  transition: all 200ms ease;
+}
+
+/* .social ul li:hover {
   transform: translateX(130px);
   background-color: rgba(0, 0, 0, 0.5);
-  filter: drop-shadow(2px 1px 3px #000);
+  /* filter: drop-shadow(2px 1px 3px #000); 
   transition: all 1s linear;
-}
+} */
 
-.social ul li:not(:hover) {
-  transition: all 4s ease;
-}
+/* .social ul li:not(:hover) {
+  transition: all 2s linear;
+} */
 
-.social ul li a {
+/* .social ul li a {
   position: relative;
-
   padding-right: 5%;
   color: white;
   font-size: 1.7rem;
   gap: 20px;
+} */
+
+.social ul li:hover svg {
+animation: spinRight 1s linear forwards;
+}
+.social ul li:not(hover) svg {
+animation: spinLeft 2s linear forwards;
 }
 
+/* 
+.social ul li svg {
+
+} */
+/*   
 .social ul li svg {
   position: relative;
   top: 2px;
@@ -453,16 +505,16 @@ padding-bottom: 0.5rem;
   transform: rotate(0deg);
   background-color: #000;
   opacity: 0.7;
-}
-
+} */
+/* 
 .social ul li:hover svg {
   animation: spinRight 1s linear forwards;
-  /* filter: drop-shadow(1px 1px 1px #fff); */
+
 }
 
 .social ul li svg:not(:hover) {
-  animation: spinLeft 1s linear forwards;
-}
+  animation: spinLeft 2s linear forwards;
+} */
 
 @keyframes spinRight {
   from {
@@ -472,15 +524,18 @@ padding-bottom: 0.5rem;
   to {
     transform: rotate(360deg);
     padding: 2px;
+    opacity: 1;
   }
 }
 @keyframes spinLeft {
   from {
     transform: rotate(360deg);
     padding: 2px;
+     opacity: 1;
   }
   to {
     transform: rotate(0deg);
+     opacity: 0.5;
   }
 }
 
@@ -488,6 +543,8 @@ padding-bottom: 0.5rem;
   position: relative;
   top: -9px;
   color: #fff;
+    filter: drop-shadow(0 0 2px #fff);
+  
 }
 
 .social li .instagram svg {
@@ -671,11 +728,8 @@ padding-bottom: 0.5rem;
 }
 
 .products .product-icons a:hover {
-  /* color: var(--secondary) ; */
-   /* box-shadow: 0 0 2px rgba(248, 248, 250, 0.5); */
-  font-weight: bold;
-  background-color: var(--quarter);
-  border: 1.5px solid  var(--quarter);
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
 }
 
 .products .product-image {
@@ -704,7 +758,12 @@ padding-bottom: 0.5rem;
   font-weight:bold ;
 }
 
-
+.products .product-price  span {
+  text-decoration: line-through;
+  font-weight: lighter;
+  font-size: 1rem;
+  
+}
 
 
 /*   -------   contact section   --------    */
@@ -843,21 +902,7 @@ footer .credit a {
   padding: 1.2rem;
   border: 1px solid #666;
   width: 80%;
-  animation: animateModal 0.5s;
 }
-
-@keyframes animateModal {
-  from {
-    top: -300px;
-    opacity: 0;
-  }
-  to {
-    top: 0;
-    opacity: 1;
-  }
-}
-
-
 
 .modal-container .close-icon {
   position: absolute;
@@ -878,8 +923,8 @@ footer .credit a {
 
 .modal-content p {
   font-size: 1.2rem;
-  line-height: 1.6rem;
-  margin-top: 1rem;
+  line-height: 1.8rem;
+  margin-top: 1.2rem;
 }
 
 .modal-content a {

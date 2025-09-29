@@ -75,16 +75,8 @@ document.querySelector('.modal .close-icon').onclick = (e) => {
 window.onclick = (e) => {
   if (e.target === itemDetailModal) {
     itemDetailModal.style.display = 'none';
-
   };
 };
 
-// konversi rupiah
 
-const rupiah = (number) => {
-  return new Intl.NumberFormat('id-ID', {
-    style:'currency',
-currency: 'IDR',
-minimumFractionDigits: 0,
-  }).format(number);
-};
+

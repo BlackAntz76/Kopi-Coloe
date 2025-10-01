@@ -80,3 +80,27 @@ window.onclick = (e) => {
 
 
 
+// const social = document.getElementsById("social");
+
+// social.addEventListener("mouseenter", () => {
+//   social.classList.add("spinRight");
+
+//   setTimeout(() => {
+//     searchBox.classList.remove("spinRight");
+//   }, 1000);
+// });
+
+// const social = document.querySelectorAll('.social li');
+// social.forEach( li => {
+//   const svg = li.querySelector('svg');
+//   if (!svg) return;
+
+// li.addEventListener('mouseenter', () => {
+//   svg.classList.add('.social ul li svg');
+
+//   svg.addEventListener('animationend', () => {
+//     svg.classList.remove('spinRight');
+//   }, { once: true});
+// });
+
+// });

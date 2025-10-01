@@ -23,8 +23,7 @@
     <!-- alpine js -->
      <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   
-  <!-- app -->
-  <script src="src/app.js"></script>
+
   
     </head>
 
@@ -54,8 +53,8 @@
   <label for="search-box"> <i data-feather="search"></i></label>
 </div>
 
-<!-- shopping card start -->
 
+<!-- shopping card start -->
 
 <div class="shopping-cart">
   <template x-for="(item, index) in $store.cart.items" x-keys="index">
@@ -78,6 +77,8 @@
 
  <div class="form-container" x-show="$store.cart.items.length">
   <form action="" id="checkoutForm">
+    <input type="hidden" name="items" x-model="JSON.stringify($store.cart.items)">
+    <input type="hidden" name="total" x-model="$store.cart.total">
     <h5>Customer Detail </h5>
 
     <label for="name">
@@ -95,7 +96,7 @@
       <input type="number" name="phone" id="phone" autocomplete="off">
     </label>
 
-<button class="checkout-button" type="submit" id="checkout-button" value="checkout">Check Out</button>
+<button class="checkout-button disabled" type="submit" id="checkout-button" value="checkout">Check Out</button>
 
   </form>
  </div>
@@ -129,7 +130,7 @@
 
 </div> 
 
-<div class="social">
+<div class="social" id="social">
  <ul>
   <li>
     <a href="" class="instagram">
@@ -426,7 +427,9 @@
 
 <script src="js/script.js"></script>
 
-
+  <!-- app -->
+  <script src="src/app.js "></script>
+  
 </body>
 </html>
 

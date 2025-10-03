@@ -39,6 +39,9 @@ document.addEventListener("alpine:init", () => {
     },
 
 
+    
+
+
     remove(id) {
         const cartItem =  this.items.find((item) => item.id === id);
 
@@ -121,3 +124,5 @@ const rupiah = (number) => {
     minimumFractionDigits: 0,
   }).format(number);
 };
+
+
